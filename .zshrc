@@ -16,7 +16,7 @@ export KEYTIMEOUT=1
 export PATH=$PATH:$HOME/.local/bin
 export PROMPT='%B%2~%b %(!.#.>) '
 export EDITOR=vim
-eval `dircolors .dir_colors`
+eval `dircolors $HOME/.config/dir_colors`
 
 alias ls="ls --color=auto --file-type"
 alias grep="grep --colour=auto"
