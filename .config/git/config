@@ -1,3 +1,7 @@
 [user]
 	email = polycitizen@gmail.com
 	name = polyzen
+[difftool]
+	prompt = false
+[diff]
+	tool = vimdiff
