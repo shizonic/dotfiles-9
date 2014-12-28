@@ -20,7 +20,7 @@ eval `dircolors $HOME/.config/dir_colors`
 
 alias ls="ls --color=auto --file-type"
 alias grep="grep --colour=auto"
-pb () { curl -F "c=@${1:--}" https://ptpb.pw }
+pb () { curl -sF "c=@${1:--}" -w "%{redirect_url}" https://ptpb.pw -o /dev/stderr | xclip 2>/dev/null }
 alias ix="curl -F 'f:1=<-' ix.io"
 function w3ms(){ w3m "https://startpage.com/do/search?query=$*" }
 alias suspend=$HOME/.local/bin/suspend
