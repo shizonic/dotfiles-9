@@ -23,7 +23,6 @@ alias grep="grep --colour=auto"
 pb () { curl -sF "c=@${1:--}" -w "%{redirect_url}" https://ptpb.pw -o /dev/stderr | xclip 2>/dev/null }
 alias ix="curl -F 'f:1=<-' ix.io"
 function w3ms(){ w3m "https://startpage.com/do/search?query=$*" }
-alias suspend=$HOME/.local/bin/suspend
 alias kpcli="kpcli --histfile /dev/null"
 alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
 
