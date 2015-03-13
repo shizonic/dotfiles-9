@@ -13,6 +13,15 @@ autoload -U colors && colors
 # Reduces the delay between vi modes in zsh, which is 4ms. (Thanks Earnestly)
 export KEYTIMEOUT=1
 
+# Dircolors on completions
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# if there are more than 5 options allow selecting from a menu
+zstyle ':completion:*' menu select=5
+# complete manual by their section
+zstyle ':completion:*:manuals' separate-sections true
+zstyle ':completion:*:manuals.*' insert-sections   true
+zstyle ':completion:*:man:*' menu yes select
+
 export PATH=$PATH:$HOME/.local/bin
 export PROMPT='%B%2~%b %(!.#.>) '
 export EDITOR=vim
