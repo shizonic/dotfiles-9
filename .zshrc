@@ -40,6 +40,7 @@ function w3ms(){ w3m "https://startpage.com/do/search?query=$*" }
 alias kpcli="kpcli --histfile /dev/null"
 alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
 function aurdiff() { cd ~/pkg/$1; vimdiff {,https://aur.archlinux.org/packages/"${1:0:2}/$1/"}PKGBUILD }
+function lsupd() { checkupdates; cower -ub }
 
 man() {
 	env \
