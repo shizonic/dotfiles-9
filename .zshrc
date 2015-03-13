@@ -22,6 +22,12 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections   true
 zstyle ':completion:*:man:*' menu yes select
 
+setopt appendhistory \
+  histexpiredupsfirst \
+  correct \
+  printexitvalue \
+  nobgnice
+
 export PATH=$PATH:$HOME/.local/bin
 export PROMPT='%B%2~%b %(!.#.>) '
 export EDITOR=vim
