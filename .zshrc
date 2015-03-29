@@ -29,7 +29,7 @@ setopt appendhistory \
   nobgnice
 
 export PATH=$PATH:$HOME/.local/bin
-export PROMPT='%B%2~%b %(!.#.>) '
+export PROMPT='%2~ %(!.#.>) '
 export EDITOR=vim
 eval $(dircolors $HOME/.config/dir_colors)
 
