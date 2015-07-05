@@ -47,6 +47,13 @@ function aurdiff() {
   vimdiff https://aur.archlinux.org/packages/$dir/$pkg/PKGBUILD ~/pkg/cower/$pkg/PKGBUILD
 }
 
+function aurpush() {
+  pushd ~/pkg/repo
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  git push ssh://aur/${branch:-$1}.git ${branch:-$1}:master
+  popd
+}
+
 man() {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[01;31m") \
