@@ -39,8 +39,13 @@ alias ix="curl -F 'f:1=<-' ix.io"
 function w3ms(){ w3m "https://startpage.com/do/search?query=$*" }
 alias kpcli="kpcli --histfile /dev/null"
 alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
-function aurdiff() { cd ~/pkg/$1; vimdiff {,https://aur.archlinux.org/packages/"${1:0:2}/$1/"}PKGBUILD }
 function lsupd() { checkupdates; cower -ub }
+
+function aurdiff() {
+  [[ $1 ]] && local pkg=$1 || local pkg=${PWD##*/}
+  local dir=${pkg:0:2}
+  vimdiff https://aur.archlinux.org/packages/$dir/$pkg/PKGBUILD ~/pkg/cower/$pkg/PKGBUILD
+}
 
 man() {
 	env \
