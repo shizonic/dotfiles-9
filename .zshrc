@@ -22,6 +22,16 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections   true
 zstyle ':completion:*:man:*' menu yes select
 
+autoload -Uz vcs_info
+setopt PROMPT_SUBST
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '✓'
+zstyle ':vcs_info:*' unstagedstr '✖' 
+export PROMPT='%2~ %(!.#.>) '
+export RPROMPT='${vcs_info_msg_0_}'
+precmd() { vcs_info }
+
 setopt appendhistory \
   histexpiredupsfirst \
   correct \
@@ -29,7 +39,6 @@ setopt appendhistory \
   nobgnice
 
 export PATH=$PATH:$HOME/.local/bin
-export PROMPT='%2~ %(!.#.>) '
 export EDITOR=vim
 eval $(dircolors $HOME/.config/dir_colors)
 
