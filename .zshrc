@@ -58,12 +58,11 @@ function aurdiff() {
   vimdiff {https://aur.archlinux.org/packages/$dir,~/pkg/cower}/$pkg/PKGBUILD
 }
 
-function aurpush() {
-  pushd ~/pkg/repo
-  local branch=$(git rev-parse --abbrev-ref HEAD)
+function aurpush() (
+  cd ~/pkg/repo
+  branch=$(git rev-parse --abbrev-ref HEAD)
   git push ssh://aur/${branch:-$1}.git ${branch:-$1}:master
-  popd
-}
+)
 
 man() {
 	env \
