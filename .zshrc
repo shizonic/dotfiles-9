@@ -51,7 +51,7 @@ alias ix="curl -F 'f:1=<-' ix.io"
 function w3ms() { w3m "https://startpage.com/do/search?query=$*" }
 alias kpcli="kpcli --histfile /dev/null"
 alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
-function lsupd() { checkupdates; cower -ub }
+function lsupd() { checkupdates; cower -ub --threads=1 }
 
 function aurdiff() {
   [[ $1 ]] && local pkg=$1 || local pkg=${PWD##*/}
