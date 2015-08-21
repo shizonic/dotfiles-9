@@ -55,8 +55,8 @@ function lsupd() { checkupdates; cower -ub --threads=1 }
 
 function aurdiff() {
   [[ $1 ]] && local pkg=$1 || local pkg=${PWD##*/}
-  local dir=${pkg:0:2}
-  vimdiff {https://aur.archlinux.org/packages/$dir,~/pkg/cower}/$pkg/PKGBUILD
+  vimdiff https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD\?h=$pkg \
+    ~/pkg/cower/$pkg/PKGBUILD
 }
 
 function aurpush() (
