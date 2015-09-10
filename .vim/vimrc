@@ -1,9 +1,8 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+call plug#end()
 
-filetype plugin indent on
 set ofu=syntaxcomplete#Complete
-syntax enable
 
 set tabstop=2
 set shiftwidth=2
