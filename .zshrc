@@ -56,9 +56,10 @@ alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
 function lsupd() { checkupdates; cower -ub --threads=1 }
 
 function aurdiff() {
-  [[ $1 ]] && local pkg=$1 || local pkg=${PWD##*/}
+  # Supply package name unless ${PWD##*/} is said name
+  [[ $1 ]] && local pkg=$1 && local pwd=$PWD || local pkg=${PWD##*/}
   vimdiff https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD\?h=$pkg \
-    ~/pkg/cower/$pkg/PKGBUILD
+    ${pwd:-~/pkg/cower/$pkg}/PKGBUILD
 }
 
 function aurpush() (
