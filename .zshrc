@@ -65,7 +65,7 @@ function aurdiff() {
 function aurpush() (
   cd ~/pkg/repo
   branch=$(git rev-parse --abbrev-ref HEAD)
-  git push ssh://aur/${branch:-$1}.git ${branch:-$1}:master
+  git push ssh://aur/$branch.git $branch:master
 )
 
 man() {
