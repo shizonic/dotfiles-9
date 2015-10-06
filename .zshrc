@@ -40,7 +40,7 @@ setopt appendhistory \
   printexitvalue \
   nobgnice
 
-export PATH=$PATH:~/.local/bin
+path+=~/.local/bin
 fpath+=~/.local/fpath
 
 export EDITOR=vim
