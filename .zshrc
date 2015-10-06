@@ -46,12 +46,12 @@ fpath+=~/.local/fpath
 export EDITOR=vim
 eval $(dircolors ~/.config/dir_colors)
 
-alias ls="ls --color=auto --file-type"
-alias grep="grep --color=auto"
-alias cp="cp --reflink=auto"
+alias ls='ls --color=auto --file-type'
+alias grep='grep --color=auto'
+alias cp='cp --reflink=auto'
 alias ix="curl -F 'f:1=<-' ix.io"
 function w3ms() { w3m "https://startpage.com/do/search?query=$*" }
-alias kpcli="kpcli --histfile /dev/null"
+alias kpcli='kpcli --histfile /dev/null'
 alias ytdl="youtube-dl -o '%(title)s.%(ext)s' --no-part --restrict-filenames $*"
 function lsupd() { checkupdates; cower -ub --threads=1 }
 
