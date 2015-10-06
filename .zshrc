@@ -5,7 +5,7 @@ SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename $HOME/.zshrc
+zstyle :compinstall filename ~/.zshrc
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -40,9 +40,9 @@ setopt appendhistory \
   printexitvalue \
   nobgnice
 
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:~/.local/bin
 export EDITOR=vim
-eval $(dircolors $HOME/.config/dir_colors)
+eval $(dircolors ~/.config/dir_colors)
 
 alias ls="ls --color=auto --file-type"
 alias grep="grep --color=auto"
@@ -78,4 +78,4 @@ man() {
 }
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh
+source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
