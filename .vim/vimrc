@@ -9,6 +9,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set ignorecase
+set smartcase
 
 set t_Co=256
 let g:gruvbox_italic=1
