@@ -3,14 +3,16 @@ Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
-set ofu=syntaxcomplete#Complete
-
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+
 set ignorecase
 set smartcase
+
+set backspace=indent,eol,start
+set ofu=syntaxcomplete#Complete
 
 set t_Co=256
 let g:gruvbox_italic=1
