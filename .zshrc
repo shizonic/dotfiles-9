@@ -22,17 +22,12 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections   true
 zstyle ':completion:*:man:*' menu yes select
 
-autoload -Uz vcs_info disambiguate-keeplast
-setopt PROMPT_SUBST
-zstyle ':vcs_info:*' formats " [%b]%u%c-"
-zstyle ':vcs_info:*' actionformats " [%b|%a]%u%c-"
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '✓'
-zstyle ':vcs_info:*' unstagedstr '✖' 
-precmd() { vcs_info; disambiguate-keeplast }
+autoload disambiguate-keeplast
+precmd() { disambiguate-keeplast }
+source ~/dev/zsh-git-prompt/zshrc.sh
+GIT_PROMPT_EXECUTABLE=haskell
 PROMPT='$REPLY %(!.#.>) '
-RPROMPT='$BRANCH'
+RPROMPT='$(git_super_status)'
 
 setopt appendhistory \
   histexpiredupsfirst \
