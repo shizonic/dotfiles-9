@@ -11,7 +11,7 @@ compinit
 # End of lines added by compinstall
 autoload -U colors && colors
 # Reduces the delay between vi modes in zsh, which is 4ms
-export KEYTIMEOUT=1
+KEYTIMEOUT=1
 
 # Dircolors on completions
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -30,9 +30,9 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '✓'
 zstyle ':vcs_info:*' unstagedstr '✖' 
-export PROMPT='$REPLY %(!.#.>) '
-export RPROMPT='${vcs_info_msg_0_}'
 precmd() { vcs_info; disambiguate-keeplast }
+PROMPT='$REPLY %(!.#.>) '
+RPROMPT='$BRANCH'
 
 setopt appendhistory \
   histexpiredupsfirst \
