@@ -43,7 +43,7 @@ setopt appendhistory \
 path+=~/.local/bin
 fpath+=~/.local/fpath
 
-export EDITOR=vim
+export EDITOR=nvim
 eval $(dircolors ~/.config/dir_colors)
 
 alias ls='ls --color=auto --file-type'
