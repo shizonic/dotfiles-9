@@ -63,7 +63,6 @@ function aurdiff() {
 }
 
 function aurpush() (
-  cd ~/pkg/repo
   branch=${"$(<.git/HEAD)"##*/}
   git push ssh://aur/$branch.git $branch:master
 )
