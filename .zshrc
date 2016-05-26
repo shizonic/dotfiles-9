@@ -33,7 +33,8 @@ setopt appendhistory \
   histexpiredupsfirst \
   correct \
   printexitvalue \
-  nobgnice
+  nobgnice \
+  nolistbeep
 
 path+=~/.local/bin
 fpath+=~/.local/fpath
