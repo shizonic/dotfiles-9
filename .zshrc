@@ -34,7 +34,8 @@ setopt appendhistory \
   correct \
   printexitvalue \
   nobgnice \
-  nolistbeep
+  nolistbeep \
+  interactivecomments
 
 fpath+=~/.local/fpath
 
