@@ -36,11 +36,7 @@ setopt appendhistory \
   nobgnice \
   nolistbeep
 
-path+=~/.local/bin
 fpath+=~/.local/fpath
-
-export EDITOR=nvim
-eval $(dircolors ~/.config/dir_colors)
 
 alias ls='ls --color=auto --file-type'
 alias grep='grep --color=auto'
