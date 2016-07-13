@@ -72,4 +72,3 @@ man() {
 }
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
