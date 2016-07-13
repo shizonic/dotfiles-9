@@ -3,23 +3,23 @@ Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
-" tabs and indenting
+" Two-space indentation
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
 
-" ignore case unless "the search pattern contains upper case characters"
+" Ignore case unless 'the search pattern contains upper case characters'
 set ignorecase
 set smartcase
 
-" colors
+" Colorscheme
 let g:gruvbox_italic=1
 set background=dark
 colorscheme gruvbox
 call togglebg#map("<F5>")
 
-" misc.
+" Misc.
 set backspace=indent,eol,start
 
 set ofu=syntaxcomplete#Complete
