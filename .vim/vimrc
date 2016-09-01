@@ -26,5 +26,5 @@ call togglebg#map("<F5>")
 
 " Misc.
 set backspace=indent,eol,start
-
+set ruler
 set ofu=syntaxcomplete#Complete
