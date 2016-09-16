@@ -14,10 +14,8 @@ set ignorecase
 set smartcase
 
 " Colorscheme
-if !has("nvim")
-  set t_8f=[38;2;%lu;%lu;%lum
-  set t_8b=[48;2;%lu;%lu;%lum
-endif
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
 set termguicolors
 set background=dark
 let g:gruvbox_italic=1
