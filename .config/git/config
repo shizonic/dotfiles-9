@@ -7,3 +7,9 @@
 	tool = vimdiff
 [push]
 	default = simple
+[sendemail]
+	smtpencryption = tls
+	smtpserver = mail.archlinux.info
+	smtpuser = polyzen@archlinux.info
+	suppresscc = self
+	smtpserverport = 587
