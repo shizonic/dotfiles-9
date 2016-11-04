@@ -37,7 +37,7 @@ function lsupd() { checkupdates; cower -ub }
 
 function aurpush() (
   branch=${"$(<.git/HEAD)"##*/}
-  git push aur@aur.archlinux.org/$branch.git $branch:master
+  git push aur@aur.archlinux.org:$branch.git $branch:master
 )
 
 function man() {
