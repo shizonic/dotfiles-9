@@ -13,3 +13,5 @@
 	smtpuser = polyzen@archlinux.info
 	suppresscc = self
 	smtpserverport = 587
+[commit]
+	gpgsign = true
