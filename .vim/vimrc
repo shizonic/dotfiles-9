@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
