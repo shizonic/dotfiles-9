@@ -3,6 +3,7 @@ Plug 'w0rp/ale'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'matthew-brett/vim-rst-sections', { 'for': 'rst' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'rst' }
 call plug#end()
 
