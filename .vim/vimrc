@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'dhruvasagar/vim-table-mode', { 'for': 'rst' }
 call plug#end()
 
 " Two-space indentation
@@ -27,3 +28,7 @@ call togglebg#map("<F5>")
 set backspace=indent,eol,start
 set laststatus=2
 set ofu=syntaxcomplete#Complete
+
+" For rST-compatible tables
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
