@@ -1,10 +1,21 @@
 call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'maralla/completor.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/goyo.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/limelight.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'matthew-brett/vim-rst-sections', { 'for': 'rst' }
-Plug 'dhruvasagar/vim-table-mode', { 'for': 'rst' }
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'rst'] }
+Plug 'SirVer/ultisnips'
+Plug 'jalvesaq/vimcmdline'
 call plug#end()
 
 " Two-space indentation
@@ -17,6 +28,11 @@ set autoindent
 set ignorecase
 set smartcase
 
+" Use Tab to select completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
 " Colorscheme
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
@@ -24,13 +40,19 @@ set termguicolors
 set background=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
-call togglebg#map("<F5>")
+call togglebg#map('<F5>')
 
-" Misc.
+" Miscellany
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:bufferline_echo=0
+let g:bufferline_solo_highlight=1
 set backspace=indent,eol,start
+set hidden
 set laststatus=2
-set ofu=syntaxcomplete#Complete
 
-" For rST-compatible tables
-let g:table_mode_corner_corner="+"
-let g:table_mode_header_fillchar="="
+" rST-compatible tables
+if (&filetype ==# 'rst')
+  let g:table_mode_corner_corner='+'
+  let g:table_mode_header_fillchar='='
+endif
