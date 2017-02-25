@@ -6,16 +6,15 @@ Plug 'maralla/completor.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'junegunn/limelight.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons' " Load after supported plugins
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'matthew-brett/vim-rst-sections', { 'for': 'rst' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'rst'] }
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'jalvesaq/vimcmdline'
 call plug#end()
 
