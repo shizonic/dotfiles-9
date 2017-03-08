@@ -54,8 +54,6 @@ set laststatus=2
 " Close Vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" rST-compatible tables
-if (&filetype ==# 'rst')
-  let g:table_mode_corner_corner='+'
-  let g:table_mode_header_fillchar='='
-endif
+" '.. prevent passwords leaking into swap, backup and undo files.'
+" http://lists.zx2c4.com/pipermail/password-store/2015-July/001618.html
+au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
