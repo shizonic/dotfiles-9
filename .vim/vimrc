@@ -57,4 +57,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " '.. prevent passwords leaking into swap, backup and undo files.'
 " http://lists.zx2c4.com/pipermail/password-store/2015-July/001618.html
-au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
+autocmd BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
